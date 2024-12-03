@@ -1,100 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimercado do Thomas</title>
+    <title>MiniMercado</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Minimercado do Thomas</h1>
-      <nav>
-        <a href="#frut">Frutas e Verduras</a>
-        <a href="#nao_pereciveis">Alimentícios não Perecíveis</a>
-        <a href="#higiene">Higiene e Limpeza</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">MiniMercado do Thomas</a>
+        
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#produtos-fv">Frutas e Verduras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#produtos-np"
+                  >Alimentícios não Perecíveis</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#produtos-hl">Higiene e Limpeza</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servicos">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cadastro">Cadastro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+
     </header>
-    <main>
-      <section>
-        <h2 id="frutas">Frutas e Verduras</h2>
-        <ul>
-          <li>
-            <div>
-              <img src="imagens/maca-150.png" alt="" />
-              <p>Maçã</p>
-              <p>valor: R$10,00</p>
-              <p>descrição:</p>
+
+    <!-- ======================== -->
+    <div class="container my-5" id="produtos-fv">
+      <h2 class="text-center mb-4">Frutas e Verduras</h2>
+      <div id="produtosCarouselFv" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img src="imagens/banana-150.png" class="" alt="Banana" /><br />
+              <p>Preço: R$10,00<br />Descrição: Banana</p>
             </div>
-          </li>
-          <li>
-            <div>
-              <img src="imagens/banana-150.png" alt="" />
-              <p>Banana</p>
-              <p>valor: R$10,00</p>
-              <p>descrição:</p>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img src="imagens/maca-150.png" class="d-block" alt="Maçã" />
+              <p class="desc">Preço: R$10,00<br />Descrição: Banana</p>
             </div>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2 id="nao_pereciveis">Alimentícios não Perecíveis</h2>
-        <ul>
-          <li>
-            <div>
-              <img src="imagens/arroz-150.png" alt="" />
-              <p>Arroz</p>
-              <p>valor: R$10,00</p>
-              <p>descrição:</p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#produtosCarouselFv"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#produtosCarouselFv"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ============================ -->
+
+    <div class="container my-5" id="produtos-np">
+      <h2 class="text-center mb-4">Alimentícios não Perecíveis</h2>
+      <div id="produtosCarouselNp" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img
+                src="imagens/arroz-150.png"
+                class="d-block"
+                alt="Arroz"
+              /><br />
+              <p>Preço: R$10,00<br />Descrição: Arroz</p>
             </div>
-          </li>
-          <li>
-            <div>
-              <img src="imagens/feijao-150.png" alt="" />
-              <p>Feijão</p>
-              <p>valor: R$10,00</p>
-              <p>descrição:</p>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img src="imagens/feijao-150.png" class="d-block" alt="Feijão" />
+              <p>Preço: R$10,00<br />Descrição: Feijão</p>
             </div>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2 id="higiene">Higiene e Limpeza</h2>
-        <ul>
-          <li>
-            <div>
-              <img src="imagens/sabonete-150.png" alt="" />
-              <p>Sabonete</p>
-              <p>valor: R$10,00</p>
-              <p>descrição:</p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#produtosCarouselNp"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#produtosCarouselNp"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ================================== -->
+
+    <div class="container my-5" id="produtos-hl">
+      <h2 class="text-center mb-4">Higiene e Limpeza</h2>
+      <div id="produtosCarouselHl" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img
+                src="imagens/shampoo-150.png"
+                class="d-block"
+                alt="Shampoo"
+              /><br />
+              <p class="d-block">Preço: R$10,00<br />Descrição: Shampoo</p>
             </div>
-          </li>
-          <li>
-            <div>
-              <img src="imagens/shampoo-150.png" alt="" />
-              <p>Shampoo</p>
-              <p>valor: R$10,00</p>
-              <p>descrição:</p>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                src="imagens/sabonete-150.png"
+                class="d-block"
+                alt="Sabonete"
+              />
+              <p class="d-block">Preço: R$10,00<br />Descrição: Sabonete</p>
             </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#produtosCarouselHl"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#produtosCarouselHl"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container my-5" id="servicos">
+      <h2>Serviços</h2>
+      <div class="servicos" id="retirada">
+        <a href="">Retirada no Local</a>
+      </div>
+      <div class="servicos" id="tele">
+        <a href="">Tele-Entrega</a>
+      </div>
+    </div>
+
+    <!-- Cadastro -->
+
+    <div class="container my-5" id="cadastro">
+      <h2 class="text-center mb-4">Cadastro de Cliente</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            placeholder="Digite seu nome completo"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Digite seu email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="telefone"
+            placeholder="(XX) XXXXX-XXXX"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input
+            type="text"
+            class="form-control"
+            id="endereco"
+            placeholder="Rua, Número, Bairro, Cidade"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="dataNascimento" class="form-label"
+            >Data de Nascimento</label
+          >
+          <input
+            type="date"
+            class="form-control"
+            id="dataNascimento"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sexo</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="masculino"
+                value="Masculino"
+                required
+              />
+              <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="feminino"
+                value="Feminino"
+              />
+              <label class="form-check-label" for="feminino">Feminino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="outro"
+                value="Outro"
+              />
+              <label class="form-check-label" for="outro">Outro</label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="cpf" class="form-label">CPF</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cpf"
+            placeholder="XXX.XXX.XXX-XX"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="senha" class="form-label">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="senha"
+            placeholder="Crie uma senha"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="confirmaSenha" class="form-label">Confirmar Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmaSenha"
+            placeholder="Confirme sua senha"
+            required
+          />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn">Cadastrar</button>
+        </div>
+      </form>
+    </div>
     <footer>
-      <div>
-        <p>Todos os direitos reservados</p>
-        <p>Minimercado do Thomas - 2024</p>
-      </div>
-      <nav>
-        <a href="#frut">Frutas e Verduras</a>
-        <a href="#nao_pereciveis">Alimentícios não Perecíveis</a>
-        <a href="#higiene">Higiene e Limpeza</a>
-      </nav>
-      <div>
-        <p>Siga-nos:</p>
-        <a href="https://www.facebook.com/"><img src="" alt="Facebook" /></a>
-        <a href="https://www.instagram.com/"><img src="" alt="Instagram" /></a>
-        <a href="https://www.x.com/"><img src="" alt="X" /></a>
-      </div>
+      <p>© 2024 MiniMercado do Thomas. Todos os direitos reservados.</p>
+      <p>Siga-nos:</p>
+      <a
+        href="https://facebook.com"
+        class="btn"
+        role="button"
+        aria-pressed="true"
+        >Facebook</a
+      >
+      <a
+        href="https://instagram.com"
+        class="btn"
+        role="button"
+        aria-pressed="true"
+        >Instagram</a
+      >
+      <a href="https://x.com" class="btn" role="button" aria-pressed="true"
+        >X</a
+      >
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
